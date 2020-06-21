@@ -6,21 +6,8 @@ the SCEP project includes six files but four files are required to run the scrip
 * dwh.cfg - Necessary - Data Warehouse config file. you must edit this
 * sql_queries.py - Necessary - contains all sql queries
 * create_table.py - Necessary - create fact and dimension tables for the star schema in Redshift.
-* etl.py - Necessary - load data from S3 into staging tables and process that data into the five fact\dimension tables on Redshift. 
-    * Fact Table
-        * songplays - records in log data associated with song plays i.e. records with page NextSong
-            * songplay_id, ts, user_id, level, song_id, artist_id, session_id, location, user_agent
-    
-    * Dimension Tables
-        * users - users in the app
-            * user_id, first_name, last_name, gender, level
-        * songs - songs in music database
-            * song_id, artist_id, title, duration, year
-        * artists - artists in music database
-            * artist_id, artist_name, location, artist_latitude, artist_longitude
-        * time - timestamps of records in songplays broken down into specific units
-            * start_time, hour, day, week, month, year, weekday
-
+* etl.py - Necessary - load data from S3 into staging tables ![staging tables](diagram1.png) and process that data into the five fact\dimension tables on Redshift.
+![fact and dimension diagram](diagram2.png)
 * README.md
 * test.ipynb 
 
